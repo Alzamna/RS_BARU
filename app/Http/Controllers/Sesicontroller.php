@@ -11,6 +11,7 @@ class Sesicontroller extends Controller
     {
         return view('login');
     }
+    
     function login(Request $request){
         $request->validate([
             'email'=>'required',

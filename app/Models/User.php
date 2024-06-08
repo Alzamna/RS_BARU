@@ -20,7 +20,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'nik',
+        'nama',
+        'tempat_lahir',
+        'no_telp',
+        'tanggal_lahir',
+        'jenis_kelamin',
+        'deskripsi',
+        'provinsi',
+        'kota_kabupaten',
+        'kode_pos',
+        'kecamatan',
     ];
 
     /**

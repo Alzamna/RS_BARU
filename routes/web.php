@@ -10,6 +10,7 @@ Route::middleware(['guest'])->group(function(){
     Route::get('/',[Sesicontroller::class, 'index'])->name('login');
     Route::post('/',[Sesicontroller::class, 'login']);
 });
+
 Route::get('/home',function(){
     return redirect('/admin');
 });
@@ -20,4 +21,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/admin/pendaftaran',[Admincontroller::class, 'pendaftaran']);
     Route::get('/admin/poli',[Admincontroller::class, 'poli']);
     Route::get('/logout',[Sesicontroller::class,'logout']);
+
 });
