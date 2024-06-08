@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #CDDCE3;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: #96BCB4;
+}

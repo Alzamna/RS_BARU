@@ -1,0 +1,151 @@
+main {
+    padding: 20px;
+    background-color: lightgrey;
+}
+.data-pasien {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.data-pasien h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-pasien {
+    margin-bottom: 20px;
+}
+
+.info-pasien p {
+    margin-bottom: 5px;
+}
+.keterangan {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.keterangan h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.PDF{
+    padding: 10px 15px;
+    background-color: #CDDCE3;
+    border: 1px solid #CDDCE3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Cetak{
+    padding: 10px 15px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cetak_pdf {
+    padding: 20px 1px;
+    justify-content: flex-end;
+    border-bottom: white;
+    float: inline-start;
+}
+
+.pencarian {
+    float: inline-end;
+}
+
+.cetak_pdf button:hover {
+    background-color: #96BCB4;
+}
+
+.tambah-pasien {
+    margin-bottom: 20px;
+    float: right;
+}
+
+.tambah-pasien button {
+    padding: 6px 20px;
+    background-color: #CDDCE3;
+    color: black;
+    border: 1px solid #CDDCE3;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tambah-pasien button:hover {
+    background-color: #96BCB4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #EBF1F4;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+    background-color: #B2CED6;
+}
+
+.icon-edit{
+    text-align: center;
+    word-spacing: 15px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.sebelum{
+    padding: 10px 20px;
+    background-color: #CDDCE3;
+    border: 1px solid #CDDCE3;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid #f2f2f2;
+}
+
+.sesudah{
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 3px solid #f2f2f2;
+}
+
+.navigasi {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: white;
+}
+
+/* .navigasi button {
+    padding: 10px 20px;
+    background-color: #B2CEB6;
+    color: #fff;
+    border: 1px solid #B2CEB6;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+.navigasi button:hover {
+    background-color: #96BCB4;
+}
