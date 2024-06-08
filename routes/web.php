@@ -1,17 +1,23 @@
 <?php
 
-use App\Http\Controllers\Form_Add_DataController;
-use App\Http\Controllers\RanapController;
+use App\Http\Controllers\Admincontroller;
+use App\Http\Controllers\Sesicontroller;
+use App\Http\Middleware\Userakses;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\RegistertigaController;
 
-Route::get('/', function () {
-    return view('register');    
+
+Route::middleware(['guest'])->group(function(){
+    Route::get('/',[Sesicontroller::class, 'index'])->name('login');
+    Route::post('/',[Sesicontroller::class, 'login']);
+});
+Route::get('/home',function(){
+    return redirect('/admin');
 });
 
-
-Route::get('/register', [RegisterController::class, 'index']);
-Route::get('/registertiga', [RegistertigaController::class, 'index']);
-Route::get('/ranap',[RanapController::class, 'index']);
-Route::get('/form_add', [Form_Add_DataController::class, 'index']);
+Route::middleware(['auth'])->group(function(){
+    Route::post('/login',[Sesicontroller::class, 'login']);
+    Route::get('/admin/beranda',[Admincontroller::class, 'admin']);
+    Route::get('/admin/pendaftaran',[Admincontroller::class, 'pendaftaran']);
+    Route::get('/admin/poli',[Admincontroller::class, 'poli']);
+    Route::get('/logout',[Sesicontroller::class,'logout']);
+});
