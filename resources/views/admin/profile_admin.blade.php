@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROFIL ADMIN</title>
-    <link href="{{ asset('css/profiladmin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/halaman_profil.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container-fluid">
-    <div class="container">
+    
 
         <div class="justify-content-center text-center">
             <h1>PROFIL ADMIN</h1>
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
 </div>
 

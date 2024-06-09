@@ -17,7 +17,7 @@
                 <div class="gambar-profil">
                     <i class="bi bi-person-circle"></i>
                 </div>
-                <div class="user-input-box">
+                <div class="user-input-box" style="margin-left: 38%; width: 25%">
                     <input type="text" class="form-control" id="nik" name="nik" value="{{ old('nik', $profile->nik) }}" readonly>
                 </div>
             </div>
@@ -33,6 +33,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Email</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Email" name="email" value="{{ old('email', $profile->email) }}" readonly />
                     </div>
+                </div>
+                <div class="main-user-info">
                     <div class="user-input-box">
                         <label for="tempat">Tempat Lahir</label>
                         <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ old('tempat_lahir', $profile->tempat_lahir) }}">
@@ -40,6 +42,9 @@
                     <div class="user-input-box">
                         <label for="notelp">No. Telp</label>
                         <input type="text" class="form-control" id="no_telp" name="no_telp" value="{{ old('no_telp', $profile->no_telp) }}">
+                    </div>
+                </div>
+                <div class="main-user-info">
                     <div class="user-input-box">
                         <label for="tanggal_lahir">Tanggal Lahir</label>
                         <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ old('tanggal_lahir', $profile->tanggal_lahir) }}">
@@ -50,13 +55,13 @@
                             <option value="Laki-laki" {{ old('jenis_kelamin', $profile->jenis_kelamin) == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
                             <option value="Perempuan" {{ old('jenis_kelamin', $profile->jenis_kelamin) == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
                         </select>
-                    </div>
+                    </div>                    
                     <div class="user-input-box">
                         <label for="bio">Deskripsi</label>
                         <input type="text" id="desk" name="desk" placeholder="Masukkan Deskripsi" value="{{ old('deskripsi', $profile->deskripsi) }}" />
                     </div>
                 </div>
-            </div>
+                </div>
             <br>
             <div class="container">
                 <h1 class="form-title">Alamat</h1>

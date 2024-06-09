@@ -1,0 +1,521 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mulish', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #D9D9D9;
+    --sidebar-color: #91ACCB;
+    --primary-color: #B2CED6;
+    /* --primary-color-light: #F6F5FF; */
+    --text-color: white;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home {
+    overflow-y: auto;
+}
+
+.other-element {
+    overflow-y: hidden;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 95px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li {
+    height: 45px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.image-text img {
+    margin-bottom: 10px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 30px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+/* =========================== */
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-text .name {
+    margin-top: 3px;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    color: #96BCB4;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+    margin-top: 15px;
+}
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: #11101D;
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: #11101D;
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+}
+
+/* navbar */
+.home {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.navbar.bg-body-tertiary {
+    border-radius: 10px;
+}
+
+.navbar-brand img {
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+/* card */
+.card.card-info.card-outline {
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.keterangan h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.card-tools a {
+    margin-left: 10px;
+    border-radius: 50px;
+    border: 0;
+    width: auto;
+    height: 37px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #B2CED6;
+}
+
+.card-tools a i:first-child {
+    margin-right: 8px;
+}
+
+.cetak a {
+    margin-top: 20px;
+    border-radius: 6px;
+    color: black;
+}
+
+.cetak .pdf-btn {
+    background-color: #B2CED6;
+    color: black;
+    border: 0;
+}
+
+.cetak .print-btn {
+    background-color: #D9D9D9;
+    color: black;
+    border: 0;
+}
+
+.card-tools a:hover,
+.cetak .pdf-btn:hover,
+.cetak .print-btn:hover {
+    background-color: #96BCB4;
+    color: black;
+}
+
+.cetak .input-group {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.table thead th {
+    background-color: #B2CED6;
+}
+
+.table tbody td {
+    background-color: #EBF1F4;
+}
+
+.table .edit-btn {
+    background-color: #96BCB4;
+    border: 0;
+}
+
+.table .hapus-btn {
+    background-color: #91ACCB;
+    border: 0;
+}
+
+.table .edit-btn:hover{
+    background-color: #96BCB4;
+    color: black;
+}
+.table .hapus-btn:hover{
+    background-color: #91ACCB;
+    color: black;
+}
+
+.sebelum{
+    padding: 10px 20px;
+    background-color: #CDDCE3;
+    border: 1px solid #CDDCE3;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid #f2f2f2;
+}
+
+.sesudah{
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 3px solid #f2f2f2;
+}
+
+.navigasi {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: white;
+}
+
+.navigasi button:hover {
+    background-color: #96BCB4;
+}
+
+.modal-dialog{
+    max-width: 100px;
+    height: 90vh;
+}
+
+/* create-obat */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group span {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tombol .simpan-btn {
+    background-color: #91ACCB;
+    color: black;
+    border: 0;
+}
+
+.tombol .simpan-btn:hover {
+    background-color: #91ACCB;
+}
+
+.tombol .batal-btn{
+    background-color: #B2CED6;
+    color: black;
+    border: 0;
+}
+.tombol .batal-btn:hover{
+    background-color: #B2CED6;
+    color: black;
+}
+
+.sidebar.close~.home {
+    left: 95px;
+    height: 100vh;
+    width: calc(100% - 95px);
+}
+
+/* Gaya untuk tombol hapus */
+.modal-footer .btn.hapus-btn {
+    background-color: #dc3545; /* Warna latar belakang merah */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut membulat */
+    cursor: pointer; /* Mengubah cursor saat dihover */
+}
+
+/* Efek hover untuk tombol hapus */
+.modal-footer .btn.hapus-btn:hover {
+    background-color: #c82333; /* Warna latar belakang merah yang lebih gelap */
+    color: white; /* Warna teks tetap putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat dihover */
+}
+
+/* Gaya untuk tombol batal */
+.modal-footer .btn.batal-btn {
+    background-color: #6c757d; /* Warna latar belakang abu-abu */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut membulat */
+    cursor: pointer; /* Mengubah cursor saat dihover */
+}
+
+
+.modal-footer .btn.batal-btn:hover {
+    background-color: #5a6268; /* Warna latar belakang abu-abu yang lebih gelap */
+    color: white; /* Warna teks tetap putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat dihover */
+}
+
+/* BUTTON CETAK  */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.header-content img {
+    max-width: 120px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+header h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+header h3 {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 40px;
+}
