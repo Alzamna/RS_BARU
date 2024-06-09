@@ -29,7 +29,7 @@ class User extends Authenticatable
         'jenis_kelamin',
         'deskripsi',
         'provinsi',
-        'kota_kabupaten',
+        'kota',
         'kode_pos',
         'kecamatan',
     ];

@@ -14,21 +14,21 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nik')->nullable();
+            $table->string('nik', 16)->nullable(); // NIK umumnya 16 karakter di Indonesia
             $table->string('tempat_lahir')->nullable();
-            $table->string('no_telp')->nullable();
+            $table->string('no_telp', 15)->nullable(); // Nomor telepon dengan panjang maksimal 15 karakter
             $table->date('tanggal_lahir')->nullable();
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan'])->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('provinsi')->nullable();
             $table->string('kota')->nullable();
-            $table->string('kode_pos')->nullable();
+            $table->string('kode_pos', 5)->nullable(); // Kode pos di Indonesia umumnya 5 karakter
             $table->string('kecamatan')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role',['admin', 'pendaftaran','poli'])->default('admin');
+            $table->enum('role', ['admin', 'pendaftaran', 'poli'])->default('admin');
             $table->rememberToken();
             $table->timestamps();
         });

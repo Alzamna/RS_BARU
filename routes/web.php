@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admincontroller;
 use App\Http\Controllers\Sesicontroller;
 use App\Http\Middleware\Userakses;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,3 +24,16 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[Sesicontroller::class,'logout']);
 
 });
+
+Route::resource('profile', ProfileController::class);
+
+// // Route untuk menampilkan profil admin
+// Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+
+// // Route untuk menampilkan halaman edit profil
+// Route::get('/profile/edit/{id}', [ProfileController::class, 'edit'])->name('profile.edit');
+
+// // Route untuk memperbarui profil admin
+// Route::put('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
+
+
